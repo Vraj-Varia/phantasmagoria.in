@@ -4,6 +4,7 @@ import Navigation from './Navigation';
 import Footer from './Footer';
 
 
+
 function Stories() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
@@ -71,44 +72,44 @@ function Stories() {
 
   return (
     <>
-     <Navigation
+      <Navigation
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
       />
-    <section id="stories" className="stories" ref={sectionRef}>
-      <div className="stories-header">
-        <p className="section-label">Love Stories</p>
-        <h2 className="section-title">Real Weddings</h2>
-        <div className="section-divider"></div>
-      </div>
+      <section id="stories" className="stories" ref={sectionRef}>
+        <div className="stories-header">
+          <p className="section-label">Love Stories</p>
+          <h2 className="section-title">Real Weddings</h2>
+          <div className="section-divider"></div>
+        </div>
 
-      <div className="stories-container">
-        {stories.map((story, index) => (
-          <div
-            key={story.id}
-            className={`story-card ${isVisible ? 'fade-in-up' : ''}`}
-            style={{ animationDelay: `${index * 0.15}s` }}
-          >
-            <Link to={`/event/${story.slug}`} className="story-cta">
-            <div className="story-image">
-              <div className="story-placeholder">
-                <span>{story.couple}</span>
-              </div>
+        <div className="stories-container">
+          {stories.map((story, index) => (
+            <div
+              key={story.id}
+              className={`story-card ${isVisible ? 'fade-in-up' : ''}`}
+              style={{ animationDelay: `${index * 0.15}s` }}
+            >
+              <Link to={`/event/${story.slug}`} className="story-cta">
+                <div className="story-image">
+                  <div className="story-placeholder">
+                    <span>{story.couple}</span>
+                  </div>
+                </div>
+                <div className="story-content">
+                  <h3 className="story-couple">{story.couple}</h3>
+                  <p className="story-location">{story.location}</p>
+                  <p className="story-date">{story.date}</p>
+                  <p className="story-description">{story.description}</p>
+                  <p className="story-image-count">{story.imageCount}+ Photos</p>
+                  <Link to={`/event/${story.slug}`} className="story-cta">View Gallery →</Link>
+                </div>
+              </Link>
             </div>
-            <div className="story-content">
-              <h3 className="story-couple">{story.couple}</h3>
-              <p className="story-location">{story.location}</p>
-              <p className="story-date">{story.date}</p>
-              <p className="story-description">{story.description}</p>
-              <p className="story-image-count">{story.imageCount}+ Photos</p>
-              <Link to={`/event/${story.slug}`} className="story-cta">View Gallery →</Link>
-            </div>
-            </Link>
-          </div>
-        ))}
-      </div>
-    </section>
-    <Footer />
+          ))}
+        </div>
+      </section>
+      <Footer />
     </>
   );
 }

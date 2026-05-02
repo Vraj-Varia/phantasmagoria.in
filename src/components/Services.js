@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import Navigation from './Navigation';
-import Footer from './Footer';
+
 
 // Services Section with Parallax
 function Services() {
@@ -222,7 +221,7 @@ function Services() {
         </div>
       </section>
 
-      
+
     </div>
   );
 }

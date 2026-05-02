@@ -1,19 +1,15 @@
-import React, { useEffect, useState, useRef } from 'react';
-import Portfolio from './Portfolio';
-import Stories from './Stories';
-import { Link } from 'react-router-dom';
-import Footer from './Footer';
+import React from 'react';
 
 // Hero Section with Parallax
-function Hero({ scrollY }) {
-  const parallaxOffset = scrollY * 0.5;
-
+function Hero() {
   return (
+
     <>
       <section id="hero" className="hero">
         <div
           className="hero-background"
-          style={{ transform: `translateY(${parallaxOffset}px)` }}
+          style={{ transform: `translateY(0px)` }}
+
         >
           <div className="hero-overlay"></div>
         </div>
@@ -94,7 +90,7 @@ function Hero({ scrollY }) {
             <path d="M0 0 C2 3 2 3 1.75 6.0625 C1 9 1 9 -1 11 C-0.67 7.37 -0.34 3.74 0 0 Z " fill="#B0B0B0" transform="translate(184,187)" />
           </svg> */}
 
-          
+
         </h1>
         {/*
         <div className="hero-cta">

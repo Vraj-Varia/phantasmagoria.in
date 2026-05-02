@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import './App.css';
 import Navigation from './components/Navigation';
@@ -10,8 +10,7 @@ import Portfolio from './components/Portfolio';
 import Stories from './components/Stories';
 import Services from './components/Services';
 import EventDetail from './components/EventDetail';
-import Contact from './components/contact';
-// Contact to be created separately if needed
+import Contact from './components/Contact';
 
 function AppContent() {
   const [scrollY, setScrollY] = useState(0);
@@ -46,10 +45,10 @@ function AppContent() {
 
   return (
     <div className={`app ${isLoaded ? 'loaded' : ''}`}>
-      {/* <Navigation
+      <Navigation
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
-      /> */}
+      />
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/home" element={<Home scrollY={scrollY} />} />
@@ -60,7 +59,7 @@ function AppContent() {
         <Route path="/event/:eventId" element={<EventDetail />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
@@ -73,11 +72,4 @@ function App() {
   );
 }
 
-
-
-// Placeholder for missing Contact (minimal)
-// import React, { useState, useEffect, useRef } from "react";
-
-
 export default App;
-
