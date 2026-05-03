@@ -1,10 +1,14 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
+import Footer from './Footer';
+import Navigation from './Navigation';
 
 
 
 // About Section
 function About({ scrollY }) {
+
+    const [menuOpen, setMenuOpen] = useState(false);
 
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -30,7 +34,10 @@ function About({ scrollY }) {
 
   return (
     <>
-
+      <Navigation
+              menuOpen={menuOpen}
+              setMenuOpen={setMenuOpen}
+            />
       <section id="about" className="about" ref={sectionRef}>
         <br />
         <br />
@@ -81,6 +88,7 @@ function About({ scrollY }) {
           </div>
         </div>
       </section>
+      <Footer />
 
     </>
   );

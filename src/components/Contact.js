@@ -1,6 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
+import Footer from './Footer';
+import Navigation from './Navigation';
 
 function Contact() {
+
+    const [menuOpen, setMenuOpen] = useState(false);
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const [formData, setFormData] = useState({
@@ -34,6 +38,11 @@ function Contact() {
   };
 
   return (
+    <>
+    <Navigation
+              menuOpen={menuOpen}
+              setMenuOpen={setMenuOpen}
+            />
     <section id="contact" className="contact" ref={sectionRef}>
       <br />
       <br />
@@ -147,6 +156,8 @@ function Contact() {
         </form>
       </div>
     </section>
+    <Footer />
+    </>
   );
 }
 

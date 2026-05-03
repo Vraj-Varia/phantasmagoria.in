@@ -13,6 +13,7 @@ import EventDetail from './components/EventDetail';
 import Contact from './components/Contact';
 
 function AppContent() {
+
   const [scrollY, setScrollY] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -42,13 +43,10 @@ function AppContent() {
       setMenuOpen(false);
     }
   };
+  
 
   return (
     <div className={`app ${isLoaded ? 'loaded' : ''}`}>
-      <Navigation
-        menuOpen={menuOpen}
-        setMenuOpen={setMenuOpen}
-      />
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/home" element={<Home scrollY={scrollY} />} />
@@ -59,7 +57,6 @@ function AppContent() {
         <Route path="/event/:eventId" element={<EventDetail />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      <Footer />
     </div>
   );
 }
