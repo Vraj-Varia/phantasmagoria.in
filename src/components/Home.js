@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import Portfolio from "./Portfolio";
 import Stories from "./Stories";
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useParams, Link, useLocation } from 'react-router-dom';
 import Navigation from './Navigation';
-import Footer from './Footer';
+// import Footer from './Footer';
 
 function EventDetail() {
    const [menuOpen, setMenuOpen] = useState(false);

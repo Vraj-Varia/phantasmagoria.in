@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import './App.css';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
 import Home from './components/Home';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -36,13 +34,7 @@ function AppContent() {
     setMenuOpen(false);
   }, [location.pathname]);
 
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setMenuOpen(false);
-    }
-  };
+  
   
 
   return (

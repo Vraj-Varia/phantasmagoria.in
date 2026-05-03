@@ -13,13 +13,7 @@ function Stories() {
     setMenuOpen(false);
   }, [location.pathname]);
 
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setMenuOpen(false);
-    }
-  };
+  
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
