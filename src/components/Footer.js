@@ -20,9 +20,9 @@ function Footer() {
         </div>
 
         <div className="footer-social">
-          <a href="#" aria-label="Instagram">Instagram</a>
-          <a href="#" aria-label="Facebook">Facebook</a>
-          <a href="#" aria-label="Pinterest">Pinterest</a>
+          <a href="instagram.com" aria-label="Instagram">Instagram</a>
+          <a href="facebook.com" aria-label="Facebook">Facebook</a>
+          <a href="pinterest.com" aria-label="Pinterest">Pinterest</a>
         </div>
 
         <p className="footer-copyright">&copy; {new Date().getFullYear()} Jay Dabgar Photography. All rights reserved.</p>

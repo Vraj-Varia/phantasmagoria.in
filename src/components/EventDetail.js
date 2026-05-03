@@ -116,24 +116,24 @@ function EventDetail() {
     document.body.style.overflow = 'auto';
   };
 
-  const navigateLightbox = (direction) => {
-    if (!selectedImage) return;
-    const currentIndex = filteredImages.findIndex(img => img.id === selectedImage.id);
-    let newIndex;
-    if (direction === 'next') {
-      newIndex = (currentIndex + 1) % filteredImages.length;
-    } else {
-      newIndex = (currentIndex - 1 + filteredImages.length) % filteredImages.length;
-    }
-    setSelectedImage(filteredImages[newIndex]);
-  };
+  // const navigateLightbox = (direction) => {
+  //   if (!selectedImage) return;
+  //   const currentIndex = filteredImages.findIndex(img => img.id === selectedImage.id);
+  //   let newIndex;
+  //   if (direction === 'next') {
+  //     newIndex = (currentIndex + 1) % filteredImages.length;
+  //   } else {
+  //     newIndex = (currentIndex - 1 + filteredImages.length) % filteredImages.length;
+  //   }
+  //   setSelectedImage(filteredImages[newIndex]);
+  // };
 
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (!selectedImage) return;
       if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowRight') navigateLightbox('next');
-      if (e.key === 'ArrowLeft') navigateLightbox('prev');
+      // if (e.key === 'ArrowRight') navigateLightbox('next');
+      // if (e.key === 'ArrowLeft') navigateLightbox('prev');
     };
 
     window.addEventListener('keydown', handleKeyDown);
@@ -241,13 +241,17 @@ function EventDetail() {
           <button className="lightbox-close" onClick={closeLightbox}>×</button>
           <button
             className="lightbox-nav lightbox-prev"
-            onClick={(e) => { e.stopPropagation(); navigateLightbox('prev'); }}
+            onClick={(e) => { e.stopPropagation(); 
+              // navigateLightbox('prev');
+             }}
           >
             ←
           </button>
           <button
             className="lightbox-nav lightbox-next"
-            onClick={(e) => { e.stopPropagation(); navigateLightbox('next'); }}
+            onClick={(e) => { e.stopPropagation(); 
+              // navigateLightbox('next'); 
+            }}
           >
             →
           </button>

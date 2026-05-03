@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import Home from './components/Home';
 import Hero from './components/Hero';
@@ -14,8 +14,8 @@ function AppContent() {
 
   const [scrollY, setScrollY] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation();
+  // const [menuOpen, setMenuOpen] = useState(false);
+  // const location = useLocation();
 
   useEffect(() => {
     // Trigger load animation
@@ -30,11 +30,6 @@ function AppContent() {
   }, []);
 
   // Close menu on route change
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [location.pathname]);
-
-  
   
 
   return (
