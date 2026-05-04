@@ -13,7 +13,7 @@ function Navigation({ menuOpen, setMenuOpen, scrollY }) {
       <div className="nav-container">
 
         <div className="logo">
-          <Link to="/" className="logo-text">phantasmagoria.in</Link>
+          <Link to="/" className="logo-text"><em>Phantasmagoria.in</em></Link>
           {/* <span className="logo-subtitle">Photography</span> */}
         </div>
 

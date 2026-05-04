@@ -245,7 +245,7 @@ body {
   font-family: var(--font-serif);
   font-size: 1.8rem;
   font-weight: 400;
-  letter-spacing: 0.1em;
+  /* letter-spacing: 0.1em; */
   text-transform: none;
   color: var(--color-grey-dark);
   transition: color var(--transition-medium);
