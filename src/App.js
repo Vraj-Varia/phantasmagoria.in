@@ -6,7 +6,6 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Stories from './components/Stories';
-import Services from './components/Services';
 import EventDetail from './components/EventDetail';
 import Contact from './components/Contact';
 
@@ -40,7 +39,6 @@ function AppContent() {
         <Route path="/about" element={<About scrollY={scrollY} />} />
         <Route path="/portfolio" element={<Portfolio scrollY={scrollY} />} />
         <Route path="/stories" element={<Stories />} />
-        <Route path="/services" element={<Services />} />
         <Route path="/event/:eventId" element={<EventDetail />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
