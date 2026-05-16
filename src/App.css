@@ -2119,13 +2119,7 @@ a.story-cta {
 
 /* Responsive for Event Detail */
 @media (max-width: 1024px) {
-
-  .portfolio{
-    background: var(--background-flowers);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+  
   .about {
     background: var(--background-common-portrait);
     background-position: right;
