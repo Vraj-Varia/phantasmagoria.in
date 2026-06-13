@@ -1,7 +1,25 @@
 import React, { useEffect, useState, useRef } from 'react';
 
+import ImageSlider from "./ImageSlider";
+import image1 from '../assets/1_slider.jpg';
+import image2 from '../assets/2_slider.jpg';
+import image3 from '../assets/3_slider.jpg';
+import image4 from '../assets/4_slider.jpg';
+import image5 from '../assets/5_slider.jpg';
+
+
 // Portfolio Section with Parallax Grid
 function Portfolio({ scrollY }) {
+
+const projectImages = [
+    image1,
+    image2,
+    image3,
+    image4,
+    image5
+  ];
+
+
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -33,13 +51,15 @@ function Portfolio({ scrollY }) {
 
   return (
     <section id="portfolio" className="portfolio" ref={sectionRef}>
-      <div className="section-header">
+
+      {/* <div className="section-header">
         <br />
-        {/* <p className="section-label">Portfolio</p> */}
         <h2 className="section-title">Selected Works</h2>
         <div className="section-divider"></div>
-      </div>
+      </div> */}
 
+      <ImageSlider images={projectImages} />
+{/* 
       <div className="portfolio-grid">
         {portfolioItems.map((item, index) => (
           <PortfolioItem
@@ -50,7 +70,7 @@ function Portfolio({ scrollY }) {
             isVisible={isVisible}
           />
         ))}
-      </div>
+      </div> */}
     </section>
   );
 }

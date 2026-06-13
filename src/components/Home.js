@@ -4,6 +4,8 @@ import Stories from "./Stories";
 
 function Home({ scrollY }) {
 
+
+
   return (
     <>
       <Portfolio scrollY={scrollY} />
